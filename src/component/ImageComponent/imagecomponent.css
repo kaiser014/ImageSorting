@@ -1,0 +1,111 @@
+.box-background{
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.box-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    border-bottom: 1px solid #c5c5c5;
+}
+.box-header h3{
+    margin: 0;
+}
+.box-header h5{
+    margin: 0;
+}
+.image-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    row-gap: 30px;
+    column-gap: 15px;
+    padding: 30px;
+}
+.image-container div{
+    width: 155px;
+    height: 155px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    padding: 0px;
+    border-radius: 10px;
+    border: 1px solid #c5c5c5;
+}
+
+.image-container div:first-child{
+    width: 380px;
+    height: 350px;
+    overflow: hidden;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column: 1 / span 2;
+}
+.image-container div img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+
+.image-container .upload-box{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border: 1px dashed #c5c5c5 !important;
+    padding: 0;
+}
+.image-container .upload-box .drag-area{
+    position: relative;
+    padding: 0; 
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    display: inline-block;
+    border: 0px;
+}
+.image-container .upload-box .drag-area .select{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    z-index: 999;
+    cursor: pointer;
+    transition: .4s;
+}
+.image-container .upload-box .drag-area .select .upload-image-icon{
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    border: 0px;
+}
+.image-container .upload-box .drag-area .select .upload-image-icon svg{
+    font-size: 20px;
+    color: #5256ad;
+}
+.image-container .upload-box .drag-area .select .upload-image-icon p{
+    font-size: 15px;
+    color: #5256ad;
+    margin: 0;
+}
+.image-container .upload-box .visible{
+    font-size: 18px;
+}
+.image-container .upload-box input,
+.image-container .upload-box .drag-area .on-drop,
+.image-container .upload-box .drag-area .dragover .visible{
+    display: none;
+}
