@@ -82,9 +82,6 @@ const ImageComponent = () => {
                     <div className='box-left-content'>
                         <h3>Image Sorting Gallery</h3>
                     </div>
-                    <div className='box-right-content'>
-                        {/* <h5>Delete files</h5> */}
-                    </div>
                 </div>
                 <div>
                     <div className='image-container'>

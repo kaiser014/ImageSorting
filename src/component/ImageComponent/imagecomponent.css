@@ -4,9 +4,7 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .box-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    text-align: center;
     padding: 20px 50px;
     border-bottom: 1px solid #c5c5c5;
 }
@@ -42,13 +40,13 @@
     grid-row-end: 3;
     grid-column: 1 / span 2;
 }
-.image-container div img{
+.image-container div img {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
     right: 0;
-    bottom: 0;
     width: 100%;
+    transform: translateY(-50%);
 }
 
 
@@ -109,3 +107,126 @@
 .image-container .upload-box .drag-area .dragover .visible{
     display: none;
 }
+
+
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+    .image-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        row-gap: 10px;
+        column-gap: 10px;
+        padding: 20px;
+        justify-content: space-between;
+        align-content: center;
+    }
+    .image-container div{
+        width: 125px;
+        height: 125px;
+    }
+    
+    .image-container div:first-child{
+        width: auto;
+        height: 300px;
+        grid-column: 1 / span 2;
+    }
+    .image-container .upload-box {
+        width: 125px;
+        height: 125px;
+    }
+    .box-header {
+        padding: 20px 30px;
+    }
+ }
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+    .image-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        row-gap: 10px;
+        column-gap: 10px;
+        padding: 20px;
+        justify-content: space-between;
+    }
+    .image-container div{
+        width: 150px;
+        height: 150px;
+    }
+    
+    .image-container div:first-child {
+        width: 313px;
+        height: 313px;
+        grid-column: 1 / span 2;
+    }
+    .image-container .upload-box {
+        width: 150px;
+        height: 150px;
+    }
+    .box-header {
+        padding: 20px 30px;
+    }
+ }
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 768px) {
+    .image-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        row-gap: 10px;
+        column-gap: 10px;
+        padding: 20px;
+        justify-content: space-between;
+    }
+    .image-container div{
+        width: 150px;
+        height: 150px;
+    }
+    
+    .image-container div:first-child {
+        width: 320px;
+        height: 320px;
+        grid-column: 1 / span 2;
+    }
+    .image-container .upload-box {
+        width: 150px;
+        height: 150px;
+    }
+    .box-header {
+        padding: 20px 50px;
+    }
+ }
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+    .image-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        row-gap: 30px;
+        column-gap: 15px;
+        padding: 30px;
+        justify-content: space-between;
+    }
+    .image-container div:first-child {
+        width: 345px;
+        height: 340px;
+        grid-column: 1 / span 2;
+    }
+ }
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {
+    .image-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto;
+        row-gap: 30px;
+        column-gap: 15px;
+        padding: 30px;
+        justify-content: space-between;
+    }
+    .image-container div:first-child {
+        width: 345px;
+        height: 340px;
+        grid-column: 1 / span 2;
+    }
+ } 
